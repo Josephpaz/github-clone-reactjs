@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { RiBookMarkLine } from "react-icons/ri";
 
 export const Container = styled.div`
   --horizontalPadding: 16px;
   --verticalPadding: 24px;
   padding: var(--verticalPadding) var(--horizontalPadding);
+  overflow: hidden;
 `;
 
 export const Main = styled.div`
@@ -48,6 +50,52 @@ export const Repos = styled.div`
         min-content,
         max-content
       ); //faz com que os elementos lado a lado respeitem a dimensao um do outro
+    }
+  }
+`;
+
+export const CalendarHeading = styled.span`
+  font-size: 16px;
+  margin: 36px 0px 9px;
+  display: inline-flex;
+`;
+
+export const RepoIcon = styled(RiBookMarkLine)`
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+`;
+export const Tab = styled.div`
+  display: flex;
+  align-items: center;
+  width: min-content;
+  padding: 14px 16px;
+  border-bottom: 2px solid var(--orange);
+
+  .label {
+    font-size: 14px;
+    padding: 0 7px;
+    font-weight: 600;
+  }
+
+  .number {
+    font-size: 12px;
+    background: var(--tikcer);
+    padding: 2px 6px;
+    border-radius: 24px;
+  }
+
+  .line {
+    display: flex;
+    width: 200vw;
+    border-bottom: 1px solid var(--border);
+    margin-left: -50vw;
+  }
+
+  &.mobile {
+    margin-top: var(--vertical-padding);
+    .content {
+      margin: 0 auto;
     }
   }
 `;
