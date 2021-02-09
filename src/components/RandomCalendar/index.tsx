@@ -18,7 +18,7 @@ const RandomCalendar: React.FC = () => {
           gutterSize={3.5}
           classForValue={(item: HeatMapValue) => {
             let clampedCount = 0;
-            if (item !== null) { 
+            if (item !== null) {
               clampedCount = Math.max(item.count, 0);
               clampedCount = Math.min(item.count, 4);
             } //limitar o valor do scale.
